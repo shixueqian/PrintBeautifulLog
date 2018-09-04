@@ -15,8 +15,8 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
     
+    [super viewDidLoad];
     
 }
 - (IBAction)printDict:(id)sender {
