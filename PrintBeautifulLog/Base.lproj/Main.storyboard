@@ -21,20 +21,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CT9-v6-vLs">
-                                <rect key="frame" x="156" y="49" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nv-Iv-7iN">
+                                <rect key="frame" x="73" y="255" width="228" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="打印字典"/>
+                                <state key="normal" title="打印无法转换成json的字典和数组"/>
                                 <connections>
-                                    <action selector="printDict:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RU8-eS-JjM"/>
+                                    <action selector="printModelArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PE5-r6-1Yx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-xV-daT">
-                                <rect key="frame" x="156" y="115" width="62" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CT9-v6-vLs">
+                                <rect key="frame" x="73" y="169" width="228" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="打印数组"/>
+                                <state key="normal" title="打印可以转换成json的字典和数组"/>
                                 <connections>
-                                    <action selector="printArray:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqO-9X-cVa"/>
+                                    <action selector="printDict:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RU8-eS-JjM"/>
                                 </connections>
                             </button>
                         </subviews>

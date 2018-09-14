@@ -13,8 +13,8 @@
 		04191318213D1137004FE1A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04191317213D1137004FE1A6 /* Assets.xcassets */; };
 		0419131B213D1137004FE1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04191319213D1137004FE1A6 /* LaunchScreen.storyboard */; };
 		0419131E213D1137004FE1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0419131D213D1137004FE1A6 /* main.m */; };
-		0419132A213D1D52004FE1A6 /* NSDictionary+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 04191329213D1D52004FE1A6 /* NSDictionary+Log.m */; };
-		0419132D213D20F9004FE1A6 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 0419132C213D20F9004FE1A6 /* NSArray+Log.m */; };
+		044BD93F214A817D00C0BDB6 /* SQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044BD93E214A817D00C0BDB6 /* SQModel.m */; };
+		044F1036214BB5CB0098CB07 /* SQPrintJsonLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F1035214BB5CB0098CB07 /* SQPrintJsonLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		0419131A213D1137004FE1A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0419131C213D1137004FE1A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0419131D213D1137004FE1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		04191328213D1D52004FE1A6 /* NSDictionary+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Log.h"; sourceTree = "<group>"; };
-		04191329213D1D52004FE1A6 /* NSDictionary+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Log.m"; sourceTree = "<group>"; };
-		0419132B213D20F9004FE1A6 /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
-		0419132C213D20F9004FE1A6 /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		044BD93D214A817D00C0BDB6 /* SQModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQModel.h; sourceTree = "<group>"; };
+		044BD93E214A817D00C0BDB6 /* SQModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQModel.m; sourceTree = "<group>"; };
+		044F1034214BB5CB0098CB07 /* SQPrintJsonLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPrintJsonLog.h; sourceTree = "<group>"; };
+		044F1035214BB5CB0098CB07 /* SQPrintJsonLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPrintJsonLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		0419130D213D1137004FE1A6 /* PrintBeautifulLog */ = {
 			isa = PBXGroup;
 			children = (
-				04191327213D1D48004FE1A6 /* PrintBeautifulLog */,
+				044F1033214BB5CB0098CB07 /* PrintJsonLog */,
 				0419130E213D1137004FE1A6 /* AppDelegate.h */,
 				0419130F213D1137004FE1A6 /* AppDelegate.m */,
 				04191311213D1137004FE1A6 /* ViewController.h */,
@@ -74,19 +74,19 @@
 				04191319213D1137004FE1A6 /* LaunchScreen.storyboard */,
 				0419131C213D1137004FE1A6 /* Info.plist */,
 				0419131D213D1137004FE1A6 /* main.m */,
+				044BD93D214A817D00C0BDB6 /* SQModel.h */,
+				044BD93E214A817D00C0BDB6 /* SQModel.m */,
 			);
 			path = PrintBeautifulLog;
 			sourceTree = "<group>";
 		};
-		04191327213D1D48004FE1A6 /* PrintBeautifulLog */ = {
+		044F1033214BB5CB0098CB07 /* PrintJsonLog */ = {
 			isa = PBXGroup;
 			children = (
-				04191328213D1D52004FE1A6 /* NSDictionary+Log.h */,
-				04191329213D1D52004FE1A6 /* NSDictionary+Log.m */,
-				0419132B213D20F9004FE1A6 /* NSArray+Log.h */,
-				0419132C213D20F9004FE1A6 /* NSArray+Log.m */,
+				044F1034214BB5CB0098CB07 /* SQPrintJsonLog.h */,
+				044F1035214BB5CB0098CB07 /* SQPrintJsonLog.m */,
 			);
-			path = PrintBeautifulLog;
+			path = PrintJsonLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0419132D213D20F9004FE1A6 /* NSArray+Log.m in Sources */,
+				044F1036214BB5CB0098CB07 /* SQPrintJsonLog.m in Sources */,
 				04191313213D1137004FE1A6 /* ViewController.m in Sources */,
-				0419132A213D1D52004FE1A6 /* NSDictionary+Log.m in Sources */,
+				044BD93F214A817D00C0BDB6 /* SQModel.m in Sources */,
 				0419131E213D1137004FE1A6 /* main.m in Sources */,
 				04191310213D1137004FE1A6 /* AppDelegate.m in Sources */,
 			);
