@@ -44,35 +44,6 @@
                            };
     NSLog(@"打印出的字典：%@",dict);
     
-    
-    array = nil;
-    dict = nil;
-    NSLog(@"打印出的数组：%@",array);
-    NSLog(@"打印出的字典：%@",dict);
-}
-
-- (IBAction)printModelArray:(id)sender {
-    
-    SQModel *model1 = [[SQModel alloc] init];
-    model1.isSuccess = YES;
-    model1.name = @"谦言忘语";
-    model1.age = 18;
-    
-    NSArray *array = @[
-                       model1,
-                       model1,
-                       model1
-                       ];
-    NSLog(@"打印出的数组：%@",array);
-    
-    
-    NSDictionary *dict = @{
-                           @"a":model1,
-                           @"b":model1,
-                           @"c":array,
-                           @"d":@"ddddd"
-                           };
-    NSLog(@"打印出的字典：%@",dict);
 }
 
 @end

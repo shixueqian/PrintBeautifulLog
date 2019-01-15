@@ -51,8 +51,8 @@ NSLog(@"打印出的字典：%@",dict);
 ```
 
 ### 使用方式
-直接将 NSDictionary+Log分类和NSArray+Log分类文件拉入到工程中即可自动生效使用。
-![直接将这两个分类拉入到工程中即可使用](https://upload-images.jianshu.io/upload_images/1818095-57bb0e383920592f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+直接将 SQPrintJsonLog.m 拉入到工程中即可自动生效使用。
+![直接将这两个分类拉入到工程中即可使用](./image/截图1.png)
 
 
 ### 原理

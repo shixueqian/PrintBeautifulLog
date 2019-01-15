@@ -8,6 +8,7 @@
 
 /*
  将字典（NSDictionary）和数组（NSArray）转化成JSON格式字符串输出到控制台。
+ 可以正常在控制台输出中文。
  直接将这个文件拖到工程中即可生效。
  */
 
@@ -49,6 +50,13 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
     //先判断是否能转化为JSON格式
     if (![NSJSONSerialization isValidJSONObject:self])  return nil;
     NSError *error = nil;
+    
+    NSJSONWritingOptions jsonOptions = NSJSONWritingPrettyPrinted;
+    if (@available(iOS 11.0, *)) {
+        //11.0之后，可以将JSON按照key排列后输出，看起来会更舒服
+        jsonOptions = NSJSONWritingPrettyPrinted | NSJSONWritingSortedKeys ;
+    }
+    //核心代码，字典转化为有格式输出的JSON字符串
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted  error:&error];
     if (error || !jsonData) return nil;
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
@@ -65,14 +73,20 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 - (NSString *)sqjsonlog_descriptionWithLocale:(id)locale{
 
     NSString *result = [self convertToJsonString];//转换成JSON格式字符串
-    if (!result) return [self sqjsonlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
+    if (!result) {
+        result = [self sqjsonlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
+        return result;
+    }
     return result;
 }
 //用此方法交换系统的 descriptionWithLocale:indent:方法。功能同上。
 - (NSString *)sqjsonlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
-    
+
     NSString *result = [self convertToJsonString];
-    if (!result) return [self sqjsonlog_descriptionWithLocale:locale indent:level];
+    if (!result) {
+        result = [self sqjsonlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
+        return result;
+    }
     return result;
 }
 //用此方法交换系统的 debugDescription 方法。该方法在控制台使用po打印的时候调用。
@@ -107,15 +121,21 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 //用此方法交换系统的 descriptionWithLocale: 方法。该方法在代码打印的时候调用。
 - (NSString *)sqjsonlog_descriptionWithLocale:(id)locale{
     
-    NSString *result = [self convertToJsonString];
-    if (!result) return [self sqjsonlog_descriptionWithLocale:locale];
+    NSString *result = [self convertToJsonString];//转换成JSON格式字符串
+    if (!result) {
+        result = [self sqjsonlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
+        return result;
+    }
     return result;
 }
 //用此方法交换系统的 descriptionWithLocale:indent:方法。功能同上。
 - (NSString *)sqjsonlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
     
     NSString *result = [self convertToJsonString];
-    if (!result) return [self sqjsonlog_descriptionWithLocale:locale indent:level];
+    if (!result) {
+        result = [self sqjsonlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
+        return result;
+    }
     return result;
 }
 //用此方法交换系统的 debugDescription 方法。该方法在控制台使用po打印的时候调用。
@@ -126,6 +146,7 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
     return result;
 }
 
+//在load方法中完成方法交换
 + (void)load {
     
     //方法交换
@@ -140,7 +161,6 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 }
 
 @end
-
 
 #endif
 
