@@ -14,7 +14,7 @@
 		0419131B213D1137004FE1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04191319213D1137004FE1A6 /* LaunchScreen.storyboard */; };
 		0419131E213D1137004FE1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0419131D213D1137004FE1A6 /* main.m */; };
 		044BD93F214A817D00C0BDB6 /* SQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044BD93E214A817D00C0BDB6 /* SQModel.m */; };
-		044F1036214BB5CB0098CB07 /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F1035214BB5CB0098CB07 /* PrintBeautifulLog.m */; };
+		04E2A6682251B4280093A6E1 /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2A6672251B4280093A6E1 /* PrintBeautifulLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		0419131D213D1137004FE1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		044BD93D214A817D00C0BDB6 /* SQModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQModel.h; sourceTree = "<group>"; };
 		044BD93E214A817D00C0BDB6 /* SQModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQModel.m; sourceTree = "<group>"; };
-		044F1034214BB5CB0098CB07 /* PrintBeautifulLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintBeautifulLog.h; sourceTree = "<group>"; };
-		044F1035214BB5CB0098CB07 /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
+		04E2A6662251B4280093A6E1 /* PrintBeautifulLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintBeautifulLog.h; sourceTree = "<group>"; };
+		04E2A6672251B4280093A6E1 /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		0419130D213D1137004FE1A6 /* PrintBeautifulLogDemo */ = {
 			isa = PBXGroup;
 			children = (
-				044F1033214BB5CB0098CB07 /* PrintBeautifulLog */,
+				04E2A6652251B4280093A6E1 /* PrintBeautifulLog */,
 				0419130E213D1137004FE1A6 /* AppDelegate.h */,
 				0419130F213D1137004FE1A6 /* AppDelegate.m */,
 				04191311213D1137004FE1A6 /* ViewController.h */,
@@ -80,14 +80,14 @@
 			path = PrintBeautifulLogDemo;
 			sourceTree = "<group>";
 		};
-		044F1033214BB5CB0098CB07 /* PrintBeautifulLog */ = {
+		04E2A6652251B4280093A6E1 /* PrintBeautifulLog */ = {
 			isa = PBXGroup;
 			children = (
-				044F1034214BB5CB0098CB07 /* PrintBeautifulLog.h */,
-				044F1035214BB5CB0098CB07 /* PrintBeautifulLog.m */,
+				04E2A6662251B4280093A6E1 /* PrintBeautifulLog.h */,
+				04E2A6672251B4280093A6E1 /* PrintBeautifulLog.m */,
 			);
 			path = PrintBeautifulLog;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -160,10 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044F1036214BB5CB0098CB07 /* PrintBeautifulLog.m in Sources */,
 				04191313213D1137004FE1A6 /* ViewController.m in Sources */,
 				044BD93F214A817D00C0BDB6 /* SQModel.m in Sources */,
 				0419131E213D1137004FE1A6 /* main.m in Sources */,
+				04E2A6682251B4280093A6E1 /* PrintBeautifulLog.m in Sources */,
 				04191310213D1137004FE1A6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
