@@ -51,11 +51,15 @@ NSLog(@"打印出的字典：%@",dict);
 ```
 
 ### 使用方式
-直接将 SQPrintJsonLog.m 拉入到工程中即可自动生效使用。
+#### 方式一：使用cocoapods
+``pod 'PrintBeautifulLog'``
+
+#### 方式二：手动引入
+直接将 PrintBeautifulLog文件夹内容 拉入到工程中即可自动生效使用。
 ![直接将这两个分类拉入到工程中即可使用](./image/截图1.png)
 
 
 ### 原理
 请查看我的简书上的一篇文章[【iOS】让NSLog打印字典显示得更好看(解决中文乱码并显示成JSON格式)](https://www.jianshu.com/p/79cd2476287d)
 
-### 觉得有用的话，不如点下star？
+### 觉得有用的话，不如点下Star？
