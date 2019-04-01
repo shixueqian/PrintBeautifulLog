@@ -16,7 +16,7 @@
 //DEBUG模式生效
 #ifdef DEBUG
 
-#import "SQPrintJsonLog.h"
+#import "PrintBeautifulLog.h"
 #import <objc/runtime.h>
 
 #pragma mark - 方法交换
@@ -43,7 +43,7 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 
 #pragma mark - NSObject分类
 
-@implementation NSObject (SQJSON)
+@implementation NSObject (PrintBeautifulLog)
 //将obj转换成json字符串。如果失败则返回nil.
 - (NSString *)convertToJsonString {
     
@@ -67,33 +67,33 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 
 #pragma mark - NSDictionary分类
 
-@implementation NSDictionary (SQJsonLog)
+@implementation NSDictionary (PrintBeautifulLog)
 
 //用此方法交换系统的 descriptionWithLocale: 方法。该方法在代码打印的时候调用。
-- (NSString *)sqjsonlog_descriptionWithLocale:(id)locale{
+- (NSString *)printlog_descriptionWithLocale:(id)locale{
 
     NSString *result = [self convertToJsonString];//转换成JSON格式字符串
     if (!result) {
-        result = [self sqjsonlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
+        result = [self printlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
         return result;
     }
     return result;
 }
 //用此方法交换系统的 descriptionWithLocale:indent:方法。功能同上。
-- (NSString *)sqjsonlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
+- (NSString *)printlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
 
     NSString *result = [self convertToJsonString];
     if (!result) {
-        result = [self sqjsonlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
+        result = [self printlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
         return result;
     }
     return result;
 }
 //用此方法交换系统的 debugDescription 方法。该方法在控制台使用po打印的时候调用。
-- (NSString *)sqjsonlog_debugDescription{
+- (NSString *)printlog_debugDescription{
     
     NSString *result = [self convertToJsonString];
-    if (!result) return [self sqjsonlog_debugDescription];
+    if (!result) return [self printlog_debugDescription];
     return result;
 }
 
@@ -105,9 +105,9 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
     dispatch_once(&onceToken, ^{
         
         Class class = [self class];
-        sq_swizzleSelector(class, @selector(descriptionWithLocale:), @selector(sqjsonlog_descriptionWithLocale:));
-        sq_swizzleSelector(class, @selector(descriptionWithLocale:indent:), @selector(sqjsonlog_descriptionWithLocale:indent:));
-        sq_swizzleSelector(class, @selector(debugDescription), @selector(sqjsonlog_debugDescription));
+        sq_swizzleSelector(class, @selector(descriptionWithLocale:), @selector(printlog_descriptionWithLocale:));
+        sq_swizzleSelector(class, @selector(descriptionWithLocale:indent:), @selector(printlog_descriptionWithLocale:indent:));
+        sq_swizzleSelector(class, @selector(debugDescription), @selector(printlog_debugDescription));
     });
 }
 
@@ -116,33 +116,33 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
 
 #pragma mark - NSArray分类
 
-@implementation NSArray (SQJsonLog)
+@implementation NSArray (PrintBeautifulLog)
 
 //用此方法交换系统的 descriptionWithLocale: 方法。该方法在代码打印的时候调用。
-- (NSString *)sqjsonlog_descriptionWithLocale:(id)locale{
+- (NSString *)printlog_descriptionWithLocale:(id)locale{
     
     NSString *result = [self convertToJsonString];//转换成JSON格式字符串
     if (!result) {
-        result = [self sqjsonlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
+        result = [self printlog_descriptionWithLocale:locale];//如果无法转换，就使用原先的格式
         return result;
     }
     return result;
 }
 //用此方法交换系统的 descriptionWithLocale:indent:方法。功能同上。
-- (NSString *)sqjsonlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
+- (NSString *)printlog_descriptionWithLocale:(id)locale indent:(NSUInteger)level {
     
     NSString *result = [self convertToJsonString];
     if (!result) {
-        result = [self sqjsonlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
+        result = [self printlog_descriptionWithLocale:locale indent:level];//如果无法转换，就使用原先的格式
         return result;
     }
     return result;
 }
 //用此方法交换系统的 debugDescription 方法。该方法在控制台使用po打印的时候调用。
-- (NSString *)sqjsonlog_debugDescription{
+- (NSString *)printlog_debugDescription{
     
     NSString *result = [self convertToJsonString];
-    if (!result) return [self sqjsonlog_debugDescription];
+    if (!result) return [self printlog_debugDescription];
     return result;
 }
 
@@ -154,9 +154,9 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
     dispatch_once(&onceToken, ^{
         
         Class class = [self class];
-        sq_swizzleSelector(class, @selector(descriptionWithLocale:), @selector(sqjsonlog_descriptionWithLocale:));
-        sq_swizzleSelector(class, @selector(descriptionWithLocale:indent:), @selector(sqjsonlog_descriptionWithLocale:indent:));
-        sq_swizzleSelector(class, @selector(debugDescription), @selector(sqjsonlog_debugDescription));
+        sq_swizzleSelector(class, @selector(descriptionWithLocale:), @selector(printlog_descriptionWithLocale:));
+        sq_swizzleSelector(class, @selector(descriptionWithLocale:indent:), @selector(printlog_descriptionWithLocale:indent:));
+        sq_swizzleSelector(class, @selector(debugDescription), @selector(printlog_debugDescription));
     });
 }
 

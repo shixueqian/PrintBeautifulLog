@@ -14,7 +14,7 @@
 		0419131B213D1137004FE1A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04191319213D1137004FE1A6 /* LaunchScreen.storyboard */; };
 		0419131E213D1137004FE1A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0419131D213D1137004FE1A6 /* main.m */; };
 		044BD93F214A817D00C0BDB6 /* SQModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 044BD93E214A817D00C0BDB6 /* SQModel.m */; };
-		044F1036214BB5CB0098CB07 /* SQPrintJsonLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F1035214BB5CB0098CB07 /* SQPrintJsonLog.m */; };
+		044F1036214BB5CB0098CB07 /* PrintBeautifulLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F1035214BB5CB0098CB07 /* PrintBeautifulLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		0419131D213D1137004FE1A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		044BD93D214A817D00C0BDB6 /* SQModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQModel.h; sourceTree = "<group>"; };
 		044BD93E214A817D00C0BDB6 /* SQModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQModel.m; sourceTree = "<group>"; };
-		044F1034214BB5CB0098CB07 /* SQPrintJsonLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPrintJsonLog.h; sourceTree = "<group>"; };
-		044F1035214BB5CB0098CB07 /* SQPrintJsonLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPrintJsonLog.m; sourceTree = "<group>"; };
+		044F1034214BB5CB0098CB07 /* PrintBeautifulLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintBeautifulLog.h; sourceTree = "<group>"; };
+		044F1035214BB5CB0098CB07 /* PrintBeautifulLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintBeautifulLog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		04191302213D1136004FE1A6 = {
 			isa = PBXGroup;
 			children = (
-				0419130D213D1137004FE1A6 /* PrintBeautifulLog */,
+				0419130D213D1137004FE1A6 /* PrintBeautifulLogDemo */,
 				0419130C213D1137004FE1A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,10 +61,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0419130D213D1137004FE1A6 /* PrintBeautifulLog */ = {
+		0419130D213D1137004FE1A6 /* PrintBeautifulLogDemo */ = {
 			isa = PBXGroup;
 			children = (
-				044F1033214BB5CB0098CB07 /* PrintJsonLog */,
+				044F1033214BB5CB0098CB07 /* PrintBeautifulLog */,
 				0419130E213D1137004FE1A6 /* AppDelegate.h */,
 				0419130F213D1137004FE1A6 /* AppDelegate.m */,
 				04191311213D1137004FE1A6 /* ViewController.h */,
@@ -77,16 +77,16 @@
 				044BD93D214A817D00C0BDB6 /* SQModel.h */,
 				044BD93E214A817D00C0BDB6 /* SQModel.m */,
 			);
-			path = PrintBeautifulLog;
+			path = PrintBeautifulLogDemo;
 			sourceTree = "<group>";
 		};
-		044F1033214BB5CB0098CB07 /* PrintJsonLog */ = {
+		044F1033214BB5CB0098CB07 /* PrintBeautifulLog */ = {
 			isa = PBXGroup;
 			children = (
-				044F1034214BB5CB0098CB07 /* SQPrintJsonLog.h */,
-				044F1035214BB5CB0098CB07 /* SQPrintJsonLog.m */,
+				044F1034214BB5CB0098CB07 /* PrintBeautifulLog.h */,
+				044F1035214BB5CB0098CB07 /* PrintBeautifulLog.m */,
 			);
-			path = PrintJsonLog;
+			path = PrintBeautifulLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044F1036214BB5CB0098CB07 /* SQPrintJsonLog.m in Sources */,
+				044F1036214BB5CB0098CB07 /* PrintBeautifulLog.m in Sources */,
 				04191313213D1137004FE1A6 /* ViewController.m in Sources */,
 				044BD93F214A817D00C0BDB6 /* SQModel.m in Sources */,
 				0419131E213D1137004FE1A6 /* main.m in Sources */,
@@ -299,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PrintBeautifulLog/Info.plist;
+				INFOPLIST_FILE = PrintBeautifulLogDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shixueqian.PrintBeautifulLog;
@@ -313,7 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = PrintBeautifulLog/Info.plist;
+				INFOPLIST_FILE = PrintBeautifulLogDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shixueqian.PrintBeautifulLog;
