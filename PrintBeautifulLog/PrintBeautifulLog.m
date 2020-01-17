@@ -57,7 +57,7 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
         jsonOptions = NSJSONWritingPrettyPrinted | NSJSONWritingSortedKeys ;
     }
     //核心代码，字典转化为有格式输出的JSON字符串
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:NSJSONWritingPrettyPrinted  error:&error];
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:jsonOptions  error:&error];
     if (error || !jsonData) return nil;
     NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
     return jsonString;
