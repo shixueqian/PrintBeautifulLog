@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "PrintBeautifulLog"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "将字典(NSDictionary)和数组(NSArray)打印的Log显示为Json格式,可以解决Xcode打印字典和数组时中文显示乱码问题。"
 
   # This description is used to generate tags and improve search results.
