@@ -54,7 +54,11 @@ static inline void sq_swizzleSelector(Class class, SEL originalSelector, SEL swi
     NSJSONWritingOptions jsonOptions = NSJSONWritingPrettyPrinted;
     if (@available(iOS 11.0, *)) {
         //11.0之后，可以将JSON按照key排列后输出，看起来会更舒服
-        jsonOptions = NSJSONWritingPrettyPrinted | NSJSONWritingSortedKeys ;
+        jsonOptions =  jsonOptions | NSJSONWritingSortedKeys;
+    }
+    if (@available(iOS 13.0,*)) {
+        //13.0之后，可以去除Json里面的转义字符
+        jsonOptions =  jsonOptions | NSJSONWritingWithoutEscapingSlashes;
     }
     //核心代码，字典转化为有格式输出的JSON字符串
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self options:jsonOptions  error:&error];

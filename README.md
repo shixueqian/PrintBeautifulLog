@@ -41,10 +41,10 @@ NSLog(@"打印出的字典：%@",dict);
 ```
 2018-09-04 11:10:39.559 PrintBeautifulLog[4403:375253] 打印出的字典：{
   "ArticleTitle" : "【iOS开发】打开另一个APP（URL Scheme与openURL）",
-  "ArticleUrl" : "https:\/\/www.jianshu.com\/p\/0811ccd6a65d",
+  "ArticleUrl" : "https://www.jianshu.com/p/0811ccd6a65d",
   "author" : {
     "work" : "iOS工程师",
-    "blog" : "https:\/\/www.jianshu.com\/u\/cc2cf725ac0c",
+    "blog" : "https://www.jianshu.com/u/cc2cf725ac0c",
     "nickName" : "谦言忘语"
   }
 }
